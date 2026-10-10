@@ -1,0 +1,222 @@
+<canvas id="fx"></canvas>
+<div id="grain"></div>
+
+<!-- ================= INTRO ================= -->
+<section id="intro">
+  <button class="env" id="env" aria-label="buka amplop">
+    <span class="env-back"></span>
+    <div class="env-letter">
+      <div>
+        <p class="script">for you</p>
+        <svg class="mini" viewBox="0 0 32 29"><path d="M16 29C8 22 0 15 0 8.5 0 3.8 3.8 0 8.5 0c3.1 0 5.9 1.7 7.5 4.3C17.6 1.7 20.4 0 23.5 0 28.2 0 32 3.8 32 8.5 32 15 24 22 16 29Z"/></svg>
+      </div>
+    </div>
+    <span class="env-flap"></span>
+    <span class="env-pocket"></span>
+    <span class="seal"><svg viewBox="0 0 32 29"><path d="M16 29C8 22 0 15 0 8.5 0 3.8 3.8 0 8.5 0c3.1 0 5.9 1.7 7.5 4.3C17.6 1.7 20.4 0 23.5 0 28.2 0 32 3.8 32 8.5 32 15 24 22 16 29Z"/></svg></span>
+  </button>
+  <p class="intro-hint type">klik segel lilinnya buat buka</p>
+  <p class="intro-foot serif it">handle with care — isinya cinta</p>
+</section>
+
+<!-- ================= BOOK ================= -->
+<main id="book">
+  <div class="topbar">
+    <div class="tb-left type">for: <b id="tbName">sayang</b> · est. 10.10</div>
+    <div class="tb-right">
+      <div class="lovemeter" id="loveMeter" title="love o' meter"></div>
+      <button class="iconbtn" id="musicBtn" aria-label="musik">
+        <svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="pages" id="pagesEl">
+
+    <!-- 1. COVER -->
+    <section class="page p-cream active">
+      <div class="pin">
+        <div class="wm">you</div>
+        <div class="card paper cover-card stitch" id="coverCard">
+          <p class="script sm">the day of</p>
+          <button class="locket" id="locket" aria-label="buka locket">
+            <span class="chain"></span>
+            <span class="heartframe">
+              <!-- GANTI foto di bawah ini dengan foto kalian -->
+              <img src="/images/utama.jpeg" alt="kita">
+                     </span>
+            <span class="locket-cap hand" id="locketCap">klik aku</span>
+          </button>
+          <h1 class="script xl">Birthday</h1>
+          <p class="serif it sub">to my favorite person — selamat ulang tahun ke-22.</p>
+          <p class="type date" id="coverDate">10 · 10 · 2004</p>
+          <p class="serif love">I love you.</p>
+        </div>
+        <p class="hint type">klik locketnya dulu ya</p>
+      </div>
+    </section>
+
+    <!-- 2. CALENDAR -->
+    <section class="page p-cream">
+      <div class="pin">
+        <div class="wm">us</div>
+        <div class="card paper cal-card stitch">
+          <p class="script md">Pages of us</p>
+          <p class="serif it sub">the chapter of you — <span class="u">every single date, my favorite.</span></p>
+          <div class="cal">
+            <p class="script md month" id="calMonth">Oktober</p>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+          <p class="cal-note serif it" id="calNote">psst… cari yang merah.</p>
+        </div>
+        <p class="hint type">klik tanggal merahnya</p>
+      </div>
+    </section>
+
+    <!-- 3. CAKE -->
+    <section class="page p-maroon">
+      <div class="pin">
+        <div class="wm light">wish</div>
+        <div class="card">
+          <p class="script md cream">make a wish</p>
+          <p class="serif it sub cream">satu lilin, satu harapan.</p>
+          <div class="cake">
+            <div class="candles" id="candles"></div>
+            <div class="layer l-top"></div>
+            <div class="layer l-bot"></div>
+            <div class="plate"></div>
+          </div>
+          <p class="hint cream type" id="cakeHint">tiup lilinnya — klik apinya satu-satu</p>
+          <div class="wishnote" id="wishNote">
+            <p class="script md cream">wish delivered</p>
+            <p class="serif it cream">semoga wish kamu kebaca sama semesta. kalau belum sempat wish, tutup mata dulu — aku tungguin.</p>
+            <button class="btn" id="relight">nyalain lagi</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. LETTER -->
+    <section class="page p-maroon">
+      <div class="pin">
+        <div class="wm light">dear you</div>
+        <div class="card">
+          <div class="letter">
+            <span class="tape tl"></span><span class="tape tr"></span>
+            <div class="letter-head type"><span id="letterDate">October 10</span><span>read me slow</span></div>
+            <div class="letter-body" id="letterBody"><span class="caret" id="caret"></span></div>
+            <p class="script sig" id="letterSig" style="opacity:0">— cewe baik yang sabarnya limited edition</p>
+          </div>
+          <button class="btn ghost" id="skipType">aku mau cepat baca</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. REASONS -->
+    <section class="page p-maroon">
+      <div class="pin">
+        <div class="wm light">you</div>
+        <div class="card reasons-card">
+          <p class="script md cream">10 things i like about you ♡</p>
+          <p class="serif it sub cream">dibaca sampai habis ya, effort aku lumayan ini.</p>
+          <ol class="reasons" id="reasons"></ol>
+          <p class="serif it finale-note" id="reasonDone"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PLAYLIST -->
+    <section class="page p-cream">
+      <div class="pin">
+        <div class="wm">sound</div>
+        <div class="card paper stitch">
+          <p class="script md">Our favorite songs</p>
+          <p class="serif it sub">versi kotak musik — klik judulnya buat buka catatannya</p>
+          <div class="pl-flex">
+            <div class="vinyl-wrap">
+              <div class="vinyl" id="vinyl"><div class="vlabel"><svg viewBox="0 0 32 29"><path d="M16 29C8 22 0 15 0 8.5 0 3.8 3.8 0 8.5 0c3.1 0 5.9 1.7 7.5 4.3C17.6 1.7 20.4 0 23.5 0 28.2 0 32 3.8 32 8.5 32 15 24 22 16 29Z"/></svg></div></div>
+              <div class="tonearm" id="tonearm"></div>
+            </div>
+            <ol class="songs" id="songs"></ol>
+          </div>
+          <p class="np type" id="np">now playing — silakan pilih</p>
+        </div>
+        <p class="hint type">vinyl-nya juga bisa diklik</p>
+      </div>
+    </section>
+
+    <!-- 7. MEMORIES -->
+    <section class="page p-maroon">
+      <div class="pin">
+        <div class="wm light">museum</div>
+        <div class="card">
+          <p class="script md cream">our little museum</p>
+          <p class="serif it sub cream">masuk bebas, selamanya.</p>
+          <div class="board" id="board"></div>
+        </div>
+        <p class="hint cream type">geser fotonya — klik buat liat lebih dekat</p>
+      </div>
+    </section>
+
+    <!-- 8. SCRATCH -->
+    <section class="page p-cream">
+      <div class="pin">
+        <div class="wm">secret</div>
+        <div class="card paper stitch">
+          <p class="script md">one more thing</p>
+          <p class="serif it sub">gosok kartunya pelan-pelan</p>
+          <div class="scratchwrap" id="scratchWrap">
+            <div class="prize">
+              <p class="script md">oh iya, satu lagi.</p>
+              <p class="serif it prize-body">2026 cukup plot twist-nya, ya. jangan ada season 2, kurangin bohongnya, banyakin jujurnya, love u more</p>
+              <svg viewBox="0 0 32 29"><path d="M16 29C8 22 0 15 0 8.5 0 3.8 3.8 0 8.5 0c3.1 0 5.9 1.7 7.5 4.3C17.6 1.7 20.4 0 23.5 0 28.2 0 32 3.8 32 8.5 32 15 24 22 16 29Z"/></svg>
+            </div>
+            <canvas id="scratchCv"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FINALE -->
+    <section class="page p-maroon">
+      <div class="pin">
+        <div class="wm light">xo</div>
+        <div class="card final-card">
+          <p class="script lg cream">Happy 22nd Birthday 🤍</p>
+          <p class="script xl cream" id="finName">Sayang</p>
+          <p class="serif it cream body">semoga panjang umur, sehat selalu, dan semoga semua wish kamu — yang sopan sampai yang aneh-aneh — dibaca sama semesta.</p>
+          <p class="serif it cream body">dan aku? aku cuma minta satu: taun depan, di hari yang sama, aku masih di sini nulis hal yang sama buat kamu.</p>
+          <p style="margin-top:22px"><button class="btn big" id="wishBtn"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>make a wish</button></p>
+          <p class="serif it afterwish" id="afterWish" hidden>wish kamu udah aku titipin ke bintang tadi. sekarang giliran kamu: jangan pernah berhenti jadi alasan orang lain tersenyum — terutama aku. aku sayang kamu.</p>
+          <p><button class="btn ghost" id="replayBtn" hidden>ulang dari awal</button></p>
+          <p class="footer type">made with too much love — 10.10</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="pager">
+    <button class="navbtn" id="prevBtn" aria-label="sebelumnya"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="dots" id="dots"></div>
+    <button class="navbtn" id="nextBtn" aria-label="selanjutnya"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</main>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <figure><img id="lbImg" alt="memori kita"><figcaption id="lbCap"></figcaption></figure>
+</div>
+
+<!-- bonus overlay -->
+<div class="bonus" id="bonus" hidden>
+  <div class="bonus-card paper stitch">
+    <span class="tape tl"></span><span class="tape tr"></span>
+    <p class="script md">bonus chapter</p>
+    <p class="serif it">kamu baru aja ngerakit semua potongan kataku — dan itu bikin aku makin sayang.
+      Terima kasih sudah lahir, dan terima kasih sudah bertahan sampai hari ini.
+      Umur kamu yang baru ini, aku udah nungguin dari jauh hari.
+      Pelan-pelan aja, aku gak ke mana-mana.</p>
+    <p class="serif it" style="margin-bottom:18px">— luv u, today, tomorrow, and the next.</p>
+    <button class="btn" id="bonusClose">peluk balik</button>
+  </div>
+</div>
